@@ -125,7 +125,7 @@ except ImportError:
 
 if DEBUG == False:
     DATABASES['default'] =  dj_database_url.config()
-    DOMAIN = "http://slackbk.herokuapp.com"
+    DOMAIN = "http://sportngin-slack.herokuapp.com"
     SLACK_CLIENT_ID = os.getenv('SLACK_CLIENT_ID', '')
     SLACK_CLIENT_SECRET =  os.getenv('SLACK_CLIENT_SECRET', '')
 
@@ -138,4 +138,4 @@ TEMPLATE_CONTEXT_PROCESSORS += (
     'django.core.context_processors.request',
 )
 
-ADMINS = (('Fountainhead', 'hong@vietnamdevelopers.com'))
+ADMINS = (('SportNgin', 'infrastucture@sportngin.com'))
