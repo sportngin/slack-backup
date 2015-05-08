@@ -27,8 +27,8 @@ def channel_detail(request, channel_id):
     channel = Channel.objects.get(id=channel_id)
 
     channelmember = ChannelMember.objects.filter(channel = channel, user  = request.user)
-    if channelmember.count() == 0:
-        return  HttpResponseRedirect('/')
+    #if channelmember.count() == 0:
+     #   return  HttpResponseRedirect('/')
 
     #channel.crawl_history()
     messages = Message.objects.filter(channel=channel).order_by('-ts')
